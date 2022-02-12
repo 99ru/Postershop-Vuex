@@ -1,21 +1,29 @@
 <template>
   <div>
-    <section v-for="poster in posters" :key="poster.id">
+<section>
+ <img :src="require('../assets/char-'+poster.id+'.png')" alt="poster image" height="300">
+      <p>{{poster.job}}</p>
+</section>
+    
+
+   <!--  <section v-for="poster in posters" :key="poster.id">
       <img :src="require(`../assets/char-${poster.id}.png`)" alt="Poster" />
       <h1>{{ poster.job }}</h1>
       <p>{{ poster.price }} sek</p>
       <button>ADD TO CART</button>
-    </section>
+    </section> -->
   </div>
+
 </template>
 
 <script>
 export default {
-  computed: {
+  props: ['poster'],
+  /* computed: {
     posters() {
       return this.$store.state.posters;
     },
-  },
+  }, */
 };
 </script>
 

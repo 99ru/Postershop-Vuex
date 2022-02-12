@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <Header />
-    <router-link to="/">Home</router-link>
-    <router-link to="/Cart/">Cart</router-link>
+    <div class="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/Cart/">Cart</router-link>
+    </div>
     <router-view></router-view>
     <Footer />
   </div>
@@ -36,5 +38,13 @@ a:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #3de07e;
 }
 </style>

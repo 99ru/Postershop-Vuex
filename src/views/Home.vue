@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <Posters />
+    <router-link :to="'/SinglePoster/' + poster.id" v-for="poster in posters" :key="poster.id"><Posters :poster="poster"/></router-link>
+   <!--  <Posters /> -->
   </div>
 </template>
 
