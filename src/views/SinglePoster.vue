@@ -1,38 +1,70 @@
 <template>
-  <div>
+  <div class="container">
+    <section class="single-card">
+      <img
+        :src="require('../assets/char-' + poster.id + '.png')"
+        alt="poster image"
+      />
+      <p>{{ poster.job }}</p>
+      <button>ADD TO CART</button>
+    </section>
 
-      <img :src="require('../assets/char-'+poster.id+'.png')" alt="poster image" height="300px">
-      <p>{{poster.motif}}</p>
-      <p>Price: {{poster.price}} kr</p>
-     
-    
-   <!--  <h1>Single Poster View</h1>
-     <img :src="require(`../assets/char-${poster.id}.png`)" alt="Poster" />
-      <h1>{{ poster.job }}</h1> -->
-
+    <div class="info">
+      <h3>{{ poster.price }} sek</h3>
+      <p>{{ poster.amount }} in stock</p>
+    </div>
   </div>
 </template>
 
 <script>
-
 export default {
-computed: {
-  poster() {
-    
-     return this.$store.state.posters.find(poster => poster.id == this.$route.params.id)
+  computed: {
+    poster() {
+      return this.$store.state.posters.find(
+        (poster) => poster.id == this.$route.params.id
+      );
+    },
   },
-}
 };
 </script>
 
 <style scoped>
 * {
-  background-color: black;
+  background-color: rgb(3, 3, 3);
+  color: white;
+  font-size: 2rem;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+/* border: #e83f57 solid 1px; */
 }
 h1 {
   color: white;
 }
 img {
-  width: 500px;
+  width: 700px;
+ 
 }
+.single-card {
+  display: inline-table;
+  margin: 30px;
+}
+button {
+  background-color: #e83f57;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 </style>

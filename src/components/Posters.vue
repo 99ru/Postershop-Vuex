@@ -1,29 +1,19 @@
 <template>
   <div>
-<section>
- <img :src="require('../assets/char-'+poster.id+'.png')" alt="poster image" height="300">
-      <p>{{poster.job}}</p>
-</section>
-    
-
-   <!--  <section v-for="poster in posters" :key="poster.id">
-      <img :src="require(`../assets/char-${poster.id}.png`)" alt="Poster" />
-      <h1>{{ poster.job }}</h1>
-      <p>{{ poster.price }} sek</p>
+    <section>
+      <img
+        :src="require('../assets/char-' + poster.id + '.png')"
+        alt="poster image"
+      />
+      <p>{{ poster.job }}</p>
       <button>ADD TO CART</button>
-    </section> -->
+    </section>
   </div>
-
 </template>
 
 <script>
 export default {
-  props: ['poster'],
-  /* computed: {
-    posters() {
-      return this.$store.state.posters;
-    },
-  }, */
+  props: ["poster"],
 };
 </script>
 
@@ -33,17 +23,16 @@ export default {
 }
 img {
   width: 300px;
-  padding-top: 40px;
 }
 section {
-display: inline-table;
-margin: 30px;
+  display: inline-table;
+  margin: 30px;
 }
 h1 {
   color: white;
 }
-button{
-  background-color: #E83F57;
+button {
+  background-color: #e83f57;
   color: white;
   border: none;
   padding: 10px;
@@ -51,5 +40,4 @@ button{
   border-radius: 5px;
   cursor: pointer;
 }
-
 </style>

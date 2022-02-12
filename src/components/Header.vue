@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="menu-button">
-      <img src="@/assets/navicon.svg" width="30px" height="30px" />
+      <img src="@/assets/navicon.svg" width="30px"/>
     </div>
     <div class="ninja-image">
       <img src="@/assets/poster.png"/>

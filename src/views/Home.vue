@@ -1,7 +1,13 @@
 <template>
   <div class="home">
-    <router-link :to="'/SinglePoster/' + poster.id" v-for="poster in posters" :key="poster.id"><Posters :poster="poster"/></router-link>
-   <!--  <Posters /> -->
+    <section>
+      <router-link
+        :to="'/SinglePoster/' + poster.id"
+        v-for="poster in posters"
+        :key="poster.id"
+        ><Posters :poster="poster"
+      /></router-link>
+    </section>
   </div>
 </template>
 
@@ -25,7 +31,10 @@ export default {
   margin: 0;
   background-color: black;
 }
-img {
-  width: 10%;
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 </style>
