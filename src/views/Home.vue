@@ -1,16 +1,30 @@
 <template>
   <div class="home">
-    <h1>Poster shop</h1>
-   
-
-   
+    <Posters />
   </div>
 </template>
 
 <script>
-
+import Posters from "@/components/Posters.vue";
 
 export default {
-  components: {  },
+  components: { Posters },
+  computed: {
+    posters() {
+      return this.$store.state.posters;
+    },
+  },
 };
 </script>
+
+<style scoped>
+* {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  background-color: black;
+}
+img {
+  width: 10%;
+}
+</style>
