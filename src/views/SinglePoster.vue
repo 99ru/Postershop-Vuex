@@ -6,7 +6,7 @@
         alt="poster image"
       />
       <p>{{ poster.job }}</p>
-      <button>ADD TO CART</button>
+      <button @click="addToCart(poster)">ADD TO CART</button>
     </section>
 
     <div class="info">
@@ -18,6 +18,11 @@
 
 <script>
 export default {
+  methods: {
+    addToCart(poster) {
+      this.$store.dispatch('addToCart', poster);
+    }
+  },
   computed: {
     poster() {
       return this.$store.state.posters.find(
