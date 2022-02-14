@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 * {
-  color: white;
+  color: rgb(252, 252, 252);
   text-decoration: none;
   margin: 0;
   background-color: black;
@@ -36,5 +36,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  
 }
+
 </style>

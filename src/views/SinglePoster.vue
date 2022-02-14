@@ -49,7 +49,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-/* border: #e83f57 solid 1px; */
+
 }
 h1 {
   color: white;
@@ -70,6 +70,9 @@ button {
   margin: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+button:hover {
+  background-color: green;
 }
 
 </style>

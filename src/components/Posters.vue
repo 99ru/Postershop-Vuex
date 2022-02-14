@@ -6,7 +6,7 @@
         alt="poster image"
       />
       <p>{{ poster.job }}</p>
-      <button>ADD TO CART</button>
+      <button>view</button>
     </section>
   </div>
 </template>
