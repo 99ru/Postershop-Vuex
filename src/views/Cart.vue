@@ -1,25 +1,23 @@
 <template>
   <main>
-    <section>
-      <h1>Shopping cart</h1>
-      <ul>
-        <li v-for="poster in cart" :key="poster.id">
-          <div class="cart-products">
-            <img
-              :src="require('../assets/char-' + poster.id + '.png')"
-              width="200px"
-            />
-            <h2>{{ poster.job }}</h2>
-            <p class="stock-amount">{{ poster.stock }} in stock</p>
-          </div>
-          <div class="select-amount">
-            <p>QTY: {{ poster.amount }}</p>
-            <button @click="decrementBtn(poster)">-</button>
-            <button @click="incrementBtn(poster)">+</button>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <ul>
+      <li v-for="poster in cart" :key="poster.id">
+        <div class="cart-products">
+          <img
+            :src="require('../assets/char-' + poster.id + '.png')"
+            width="200px"
+          />
+          <p>Quantity: {{ poster.amount }}</p>
+          <button @click="decrementBtn(poster)">-</button>
+          <button @click="incrementBtn(poster)">+</button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="checkout">
+      <h2>Total: {{ cartTotal }} SEK</h2>
+      <button>Checkout</button>
+    </div>
   </main>
 </template>
 
@@ -36,47 +34,42 @@ export default {
     },
   },
   computed: {
-    ...mapGetters({ total: "total", cart: "cart" }),
-    cart() {
-      return this.$store.state.cart;
-    },
+    ...mapGetters({ cartTotal: "cartTotal", cart: "cart" }),
+    /*  cart() {
+      return this.$store.state.cart; 
+    }, */
   },
 };
 </script>
 
 <style scoped>
-section {
+.cart-products {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: rgba(0, 0, 0, 0.699);
-  color: #fff;
-  padding: 30px;
-  gap: 20px;
-}
-h1 {
-  font-size: 2rem;
-  margin-right: 60rem;
-  margin-top: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  margin: 10px;
 }
 
 ul {
-  flex-wrap: wrap;
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-button {
-  background-color: #e83f57;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  padding: 2px;
-  border-radius: 5px;
-  margin: 2px;
-  width: 60px;
 }
 .stock-amount {
   color: #e83f57;
 }
+button {
+  background-color: #e83f57;
+  color: white;
+  border: none;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 1px;
+  cursor: pointer;
+}
+.checkout {
+  border-radius: 10px;
+  width: 20%;
+  background-color: #e83f57;
+}
+
 </style>

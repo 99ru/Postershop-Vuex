@@ -11,7 +11,6 @@ export default new Vuex.Store({
     quantity: 0,
   },
 
-
   mutations: {
     addToCart(state, poster) {
       // prevent duplicates and adds quantity
@@ -53,8 +52,5 @@ export default new Vuex.Store({
       return total;
     }
   },
-
-  modules: {
-
-  },
+  modules: {},
 });
