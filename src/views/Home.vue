@@ -30,13 +30,13 @@ export default {
   text-decoration: none;
   margin: 0;
   background-color: black;
+  
 }
 section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  
 }
 
 </style>

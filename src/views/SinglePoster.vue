@@ -5,13 +5,13 @@
         :src="require('../assets/char-' + poster.id + '.png')"
         alt="poster image"
       />
-      <p>{{ poster.job }}</p>
+      <h2>{{ poster.job }}</h2>
+      <p>{{ poster.price }} SEK</p>
       <button @click="addToCart(poster)">ADD TO CART</button>
     </section>
 
     <div class="info">
-      <h3>{{ poster.price }} sek</h3>
-      <p>{{ poster.amount }} in stock</p>
+     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sit voluptas beatae, fuga dolor obcaecati molestiae expedita consequuntur laudantium ullam! Accusantium optio ipsum consequuntur? Dolor a quis hic ab? In assumenda tempora odit dicta obcaecati? Qui velit dolore sunt quos vero, modi culpa impedit sequi minima laudantium aliquid ea distinctio fugiat dolorum doloribus sed. Quo voluptatum nobis excepturi. Optio odio id veritatis molestiae dolores. In eos quibusdam harum ratione, numquam quod accusamus asperiores nisi! Optio sit vero similique quod aspernatur maxime iure, excepturi mollitia, rem provident cumque temporibus consequatur corporis. Quod, expedita. Neque beatae consequatur molestias vero, in amet laborum. </p>
     </div>
   </div>
 </template>
@@ -44,15 +44,16 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.info {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-
+.info p {
+font-size: 1.2rem;
+line-height: 1.5;
+width: 400px;
 }
 h1 {
   color: white;
+}
+p{
+  font-size: 1rem;
 }
 img {
   width: 700px;
@@ -74,5 +75,6 @@ button {
 button:hover {
   background-color: green;
 }
+
 
 </style>

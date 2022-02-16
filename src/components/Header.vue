@@ -3,9 +3,12 @@
     <div class="menu-button">
       <img src="@/assets/navicon.svg" width="30px"/>
     </div>
+
     <div class="ninja-image">
-      <img src="@/assets/poster.png"/>
+      <img src="@/assets/poster.png" height="300px"/>
     </div>
+
+  
   </header>
 </template>
 
@@ -20,7 +23,6 @@ export default {};
 header {
   background-color: #3de07e;
   width: 100%;
-  height: 608px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,5 +34,13 @@ header {
   top: 10px;
   left: 20px;
   cursor: pointer;
+  margin: 10px;
+}
+.ninja-image {
+  margin: -4px;
+}
+
+input {
+margin: 20px 0 0px 105rem;
 }
 </style>

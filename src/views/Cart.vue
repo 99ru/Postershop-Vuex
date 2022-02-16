@@ -13,8 +13,8 @@
           </div>
           <div class="select-amount">
             <p>QTY: 0</p>
-            <button>+</button>
             <button>-</button>
+            <button>+</button>
           </div>
         </li>
       </ul>
@@ -64,5 +64,4 @@ button {
   margin: 2px;
   width: 60px;
 }
-
 </style>

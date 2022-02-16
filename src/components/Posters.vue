@@ -6,7 +6,7 @@
         alt="poster image"
       />
       <p>{{ poster.job }}</p>
-      <button>view</button>
+      <button>Oh, take my money!</button>
     </section>
   </div>
 </template>
@@ -27,6 +27,7 @@ img {
 section {
   display: inline-table;
   margin: 30px;
+  
 }
 h1 {
   color: white;

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header />
-    <router-link to="/">Home</router-link>
-    <router-link to="/Cart/">Cart</router-link>
+    <router-link to="/"> Home </router-link>
+    <router-link to="/Cart/"> Cart </router-link>
     <router-view></router-view>
     <Footer />
   </div>
@@ -16,17 +16,14 @@ export default {
 };
 </script>
 
-<style >
+<style>
 * {
   margin: 0;
-  
 }
 a {
-  color:#020001;
- 
+  color: #ffffff;
   font-size: 2rem;
   font-weight: bold;
-  margin: 10px;
   text-decoration: none;
 }
 a:hover {
@@ -38,6 +35,6 @@ a:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-color: rgb(0, 0, 0);
 }
-
 </style>
