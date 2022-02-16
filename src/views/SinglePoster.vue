@@ -11,7 +11,14 @@
     </section>
 
     <div class="info">
-     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sit voluptas beatae, fuga dolor obcaecati molestiae expedita consequuntur laudantium ullam! Accusantium optio ipsum consequuntur? Dolor a quis hic ab? In assumenda tempora odit dicta obcaecati? Qui velit dolore sunt quos vero, modi culpa impedit sequi minima laudantium aliquid ea distinctio fugiat dolorum doloribus sed. Quo voluptatum nobis excepturi. Optio odio id veritatis molestiae dolores. In eos quibusdam harum ratione, numquam quod accusamus asperiores nisi! Optio sit vero similique quod aspernatur maxime iure, excepturi mollitia, rem provident cumque temporibus consequatur corporis. Quod, expedita. Neque beatae consequatur molestias vero, in amet laborum. </p>
+      <h3>{{ poster.stock }} in stock</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sit
+        voluptas beatae, fuga dolor obcaecati molestiae expedita consequuntur
+        laudantium ullam! Accusantium optio ipsum consequuntur? Dolor a quis hic
+        ab? In assumenda tempora odit dicta obcaecati? Qui velit dolore sunt
+        quos .
+      </p>
     </div>
   </div>
 </template>
@@ -20,8 +27,8 @@
 export default {
   methods: {
     addToCart(poster) {
-      this.$store.dispatch('addToCart', poster);
-    }
+      this.$store.dispatch("addToCart", poster);
+    },
   },
   computed: {
     poster() {
@@ -45,19 +52,19 @@ export default {
   justify-content: center;
 }
 .info p {
-font-size: 1.2rem;
-line-height: 1.5;
-width: 400px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 400px;
 }
 h1 {
   color: white;
 }
-p{
+p {
   font-size: 1rem;
 }
 img {
   width: 700px;
- 
 }
 .single-card {
   display: inline-table;
@@ -76,5 +83,8 @@ button:hover {
   background-color: green;
 }
 
-
+h3 {
+  font-size: 1.2rem;
+  color: #e83f57;
+}
 </style>

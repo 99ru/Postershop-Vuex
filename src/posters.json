@@ -3,73 +3,85 @@
         "id": "1",
         "job": "astronaut",
         "price": "500",
-        "amount": "23"
+        "amount": "0",
+        "stock": "10"
     },
     {
         "id": "2",
         "job": "ninja",
         "price": "500",
-        "amount": "21"
+        "amount": "0",
+        "stock": "22"
     },
     {
         "id": "3",
         "job": "developer",
         "price": "500",
-        "amount": "14"
+        "amount": "0",
+        "stock": "43"
     },
     {
         "id": "4",
         "job": "scuba-diver",
         "price": "500",
-        "amount": "15"
+        "amount": "0",
+        "stock": "44"
     },
     {
         "id": "5",
         "job": "clown",
         "price": "500",
-        "amount": "12"
+        "amount": "0",
+        "stock": "33"
     },
     {
         "id": "6",
         "job": "police",
         "price": "500",
-        "amount": "11"
+        "amount": "0",
+        "stock": "12"
     },
     {
         "id": "7",
         "job": "photographer",
         "price": "500",
-        "amount": "9"
+        "amount": "0",
+        "stock": "11"
     },
     {
         "id": "8",
         "job": "fairy",
         "price": "500",
-        "amount": "6"
+        "amount": "0",
+        "stock": "22"
     },
     {
         "id": "9",
         "job": "coach",
         "price": "500",
-        "amount": "7"
+        "amount": "0",
+        "stock": "33"
     },
     {
         "id": "10",
         "job": "chef",
         "price": "500",
-        "amount": "3"
+        "amount": "0",
+        "stock": "44"
     },
     {
         "id": "11",
         "job": "doctor",
         "price": "500",
-        "amount": "5"
+        "amount": "0",
+        "stock": "55"
     },
     {
         "id": "12",
         "job": "musician",
         "price": "500",
-        "amount": "20"
+        "amount": "0",
+        "stock": "66"
     }
 
 ]

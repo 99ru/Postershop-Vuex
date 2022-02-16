@@ -10,11 +10,12 @@
               width="200px"
             />
             <h2>{{ poster.job }}</h2>
+            <p class="stock-amount">{{ poster.stock }} in stock</p>
           </div>
           <div class="select-amount">
-            <p>QTY: 0</p>
-            <button>-</button>
-            <button>+</button>
+            <p>QTY: {{ poster.amount }}</p>
+            <button @click="decrementBtn(poster)">-</button>
+            <button @click="incrementBtn(poster)">+</button>
           </div>
         </li>
       </ul>
@@ -23,8 +24,19 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
+  methods: {
+    decrementBtn(poster) {
+      this.$store.dispatch("decrementBtn", poster);
+    },
+    incrementBtn(poster) {
+      this.$store.dispatch("incrementBtn", poster);
+    },
+  },
   computed: {
+    ...mapGetters({ total: "total", cart: "cart" }),
     cart() {
       return this.$store.state.cart;
     },
@@ -63,5 +75,8 @@ button {
   border-radius: 5px;
   margin: 2px;
   width: 60px;
+}
+.stock-amount {
+  color: #e83f57;
 }
 </style>
