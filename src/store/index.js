@@ -25,7 +25,7 @@ export default new Vuex.Store({
     },
     decrementBtn(state, poster) {
       state.cart[state.cart.indexOf(poster)].amount--;
-    }
+    },
   },
 
   actions: {

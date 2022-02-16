@@ -7,15 +7,14 @@
             :src="require('../assets/char-' + poster.id + '.png')"
             width="200px"
           />
-          <p>Quantity: {{ poster.amount }}</p>
           <button @click="decrementBtn(poster)">-</button>
           <button @click="incrementBtn(poster)">+</button>
+           <p>QNTY: {{ poster.amount }}</p>
         </div>
       </li>
     </ul>
-
     <div class="checkout">
-      <h2>Total: {{ cartTotal }} SEK</h2>
+      <p>Total: {{ cartTotal }} SEK</p>
       <button>Checkout</button>
     </div>
   </main>
@@ -44,13 +43,13 @@ export default {
 
 <style scoped>
 .cart-products {
+  width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: rgb(255, 255, 255);
   margin: 10px;
 }
-
 ul {
   list-style: none;
 }
@@ -61,15 +60,18 @@ button {
   background-color: #e83f57;
   color: white;
   border: none;
-  margin: 5px;
+  margin: 2px;
   padding: 5px;
   border-radius: 1px;
   cursor: pointer;
 }
 .checkout {
-  border-radius: 10px;
-  width: 20%;
-  background-color: #e83f57;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+ margin-right: 5rem;
+  color: white;
+  font-size: 1.2rem;
 }
-
 </style>

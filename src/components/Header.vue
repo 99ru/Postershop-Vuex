@@ -1,19 +1,20 @@
 <template>
   <header>
+    
     <div class="menu-button">
-      <img src="@/assets/navicon.svg" width="30px"/>
+      <img src="@/assets/navicon.svg" width="30px" />
     </div>
 
     <div class="ninja-image">
-      <img src="@/assets/poster.png" height="300px"/>
+      <img src="@/assets/poster.png" height="300px" />
     </div>
 
-  
   </header>
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style scoped>
@@ -38,9 +39,5 @@ header {
 }
 .ninja-image {
   margin: -4px;
-}
-
-input {
-margin: 20px 0 0px 105rem;
 }
 </style>
